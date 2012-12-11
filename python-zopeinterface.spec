@@ -39,3 +39,14 @@ rm -rf %{buildroot}
 %{python_sitearch}/*
 
 
+
+
+%changelog
+* Wed Jun 08 2011 Antoine Ginies <aginies@mandriva.com> 3.6.1-1mdv2011.0
++ Revision: 683278
+- import python-zopeinterface
+
+
+* Wed Jun 8 2011 Antoine Ginies <aginies@mandriva.com> 3.6.1
+- first release for Mandriva 
+
