@@ -1,13 +1,14 @@
 %define module zopeinterface
+%define debug_package %{nil}
+
 Name:           python-%{module}
 Version:        3.6.1
-Release:        %mkrel 1
+Release:        2
 Url:            http://pypi.python.org/pypi/zope.interface
 Summary:        Interfaces for Python
 License:        ZPL 2.1
 Group:          Development/Python
 Source:         zope.interface-%{version}.tar.bz2
-BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 BuildRequires:  python-devel
 
 %description
@@ -27,26 +28,8 @@ the Design By Contract methodology support in Python.
 CFLAGS="%{optflags}" python setup.py build
 
 %install
-rm -rf $RPM_BUILD_ROOT
-%{__python} setup.py install --root $RPM_BUILD_ROOT --install-purelib=%{python_sitearch}
-
-%clean
-rm -rf %{buildroot}
+%{__python} setup.py install --root %{buildroot} --install-purelib=%{python_sitearch}
 
 %files 
-%defattr(-,root,root,-)
 %doc COPYRIGHT.txt CHANGES.txt LICENSE.txt README.txt
 %{python_sitearch}/*
-
-
-
-
-%changelog
-* Wed Jun 08 2011 Antoine Ginies <aginies@mandriva.com> 3.6.1-1mdv2011.0
-+ Revision: 683278
-- import python-zopeinterface
-
-
-* Wed Jun 8 2011 Antoine Ginies <aginies@mandriva.com> 3.6.1
-- first release for Mandriva 
-
