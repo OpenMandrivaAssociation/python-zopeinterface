@@ -4,7 +4,7 @@
 Name:           python-%{module}
 Version:        3.6.1
 Release:        2
-Url:            http://pypi.python.org/pypi/zope.interface
+Url:            https://pypi.python.org/pypi/zope.interface
 Summary:        Interfaces for Python
 License:        ZPL 2.1
 Group:          Development/Python
